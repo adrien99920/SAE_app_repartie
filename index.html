@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Carte Vélib Nancy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Inclure les styles CSS de Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+  <!-- Définir la taille de la carte avec CSS -->
+  
+</head>
+<body>
+  <button id="add_resto">Ajouter un nouveau restaurant</button>
+
+    
+
+  <div id="resto_info">
+    <form action="">
+      <label for="name">Nom du restaurant: </label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="adresse">Adresse: </label>
+      <input type="text" name="adresse" id="adresse" required> 
+
+      <label for="nbPlace">Nombre de place: </label>
+      <input type="number" name="nbPlace" id="nbPlace" required> 
+    </form>
+  </div>
+   
+
+  <div id="map"></div>
+
+  <!-- Inclure la bibliothèque Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Inclure le fichier JavaScript personnalisé -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

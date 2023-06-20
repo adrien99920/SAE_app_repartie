@@ -1,0 +1,18 @@
+body{
+  height: 100vh;
+}
+
+#map {
+    height: 70%;
+    width: 100%;
+  }
+
+#form_reservation{
+  display: flex;
+  flex-direction: column;
+}
+
+#form_reservation div{
+  display: flex;
+  flex-direction: row;
+}
