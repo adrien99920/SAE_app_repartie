@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>A propos</title>
-    <link rel="stylesheet" href="../about.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <header>
+        <a href="../index.html">Accueil</a>
+        <a href="#">A propos</a>
+      </header>
+
     <div class="title">
         <h1>Projet d'application répartie</h1>
         <ul>
@@ -19,7 +24,7 @@
     </div>
     <h2> Le travail effectué </h2>
     <div class="description" style="display: flex; justify-content: space-between;">
-        <div style="flex: 1; padding: 10px;">
+        <div style="flex: 1; padding: 10px; text-align: justify">
             <p>Nous avons travaillé en équipe pour réaliser une application répartie pour l'affichage d'informations hétérogènes sur Nancy, comme le suggérait le cahier des charges de notre SAE "Application Répartie". Notre application est hébergée sur webetu et accessible à partir de plusieurs navigateurs.
 
                 En utilisant la technologie RMI, nous avons créé un service pour interagir avec notre base de données de restaurants. Cette base de données a été enrichie et étendue pour inclure plus de détails sur chaque restaurant, notamment leur nom, leur adresse et leurs coordonnées GPS. Le service RMI offre également des fonctionnalités comme l'inscription à un service central, la récupération des coordonnées de tous les restaurants de Nancy, et la réservation d'une table en fournissant des détails tels que le nom, le prénom, le nombre de convives et les coordonnées téléphoniques. Toutes les réponses du service sont formatées en JSON pour une intégration plus aisée avec d'autres systèmes.
@@ -29,20 +34,23 @@
                 Pour traiter les données qui étaient bloquées, nous avons développé un autre service RMI qui utilise la classe HttpClient pour interroger ces données et renvoyer le code d'erreur, le contenu de la réponse et le 'content-type' de la réponse.
             </p>
         </div>
-        <div style="flex: 1; padding: 10px;">
+        <div style="flex: 1; padding: 10px; text-align: justify;">
             <p>
                 Ce service peut également s'inscrire sur un serveur central.
                 Afin de contourner les restrictions de sécurité du navigateur, nous avons créé un proxy utilisant la classe HttpServer. Ce proxy sert d'intermédiaire entre notre site et les données bloquées. Il offre également un service RMI pour permettre à nos services RMI de restaurants et des principaux établissements d'enseignement supérieur de s'inscrire. Grâce à ce proxy, nous avons ajouté à notre carte les établissements d'enseignement supérieur et les restaurants avec leurs coordonnées. Il est également possible de réserver une table depuis la marque d'un restaurant sur la carte.
 
-                Enfin, nous avons ajouté plusieurs fonctionnalités supplémentaires à notre application. Nous avons intégré un service météorologique pour afficher la météo des prochaines heures à Nancy. Nous avons également ajouté la possibilité d'enregistrer un nouveau restaurant en cliquant simplement sur sa localisation sur la carte. Un service générique a été développé pour récupérer le contenu des URLs bloquées par le navigateur.
+                Enfin, nous avons ajouté plusieurs fonctionnalités supplémentaires à notre application. Nous avons intégré un service météorologique pour afficher la météo des prochaines heures à Nancy. Nous avons également ajouté la possibilité d'enregistrer un nouveau restaurant en cliquant simplement sur sa localisation sur la carte. 
 
                 Tous nos codes sources sont disponibles sur notre dépôt Git et notre site contient un onglet "compte rendu" qui fournit un résumé complet de notre travail, y compris un schéma de notre architecture, ce qui a été fait, les informations nécessaires pour utiliser notre projet, et tout ce qui peut aider à comprendre notre travail.</p>
         </div>
     </div>
     <h2> L'architecture </h2>
     <div class="schem">
+        <h3>Architecture globale</h3>
         <iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/5emkVAAJJiFs6badkB1xRU"></iframe>
-    </div>
+        <h3>Exemple d'utilisation</h3>
+        <iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/Ss4T91bYNpLe1p5rYwT6oj"></iframe>
+        </div>
     <h2> Utiliser le projet </h2>
     <div class="tuto">
         <div class="elem">
@@ -79,8 +87,12 @@
 
     </div>
     <h2> Le code </h2>
+    <a href="https://webetu.iutnc.univ-lorraine.fr/www/scher7u/app-repartie-1.0-SNAPSHOT-all.jar">Voici le .jar</a>
     <div class="depot">
         <a href="https://github.com/adrien99920/SAE_app_repartie">
+            <svg xmlns="http://www.w3.org/2000/svg" width="240" height="100" viewBox="0 0 24 24"><g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#ffffff" stroke-width="0.8" fill="#1434ff" style="stroke:#ffffff;stroke-width:0.8;fill:#262626"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://github.com/SLATTY54/Application-Repartie">
             <svg xmlns="http://www.w3.org/2000/svg" width="240" height="100" viewBox="0 0 24 24"><g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#ffffff" stroke-width="0.8" fill="#1434ff" style="stroke:#ffffff;stroke-width:0.8;fill:#262626"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
         </a>
     </div>
