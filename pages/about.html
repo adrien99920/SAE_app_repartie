@@ -24,7 +24,7 @@
     </div>
     <h2> Le travail effectué </h2>
     <div class="description" style="display: flex; justify-content: space-between;">
-        <div style="flex: 1; padding: 10px;">
+        <div style="flex: 1; padding: 10px; text-align: justify">
             <p>Nous avons travaillé en équipe pour réaliser une application répartie pour l'affichage d'informations hétérogènes sur Nancy, comme le suggérait le cahier des charges de notre SAE "Application Répartie". Notre application est hébergée sur webetu et accessible à partir de plusieurs navigateurs.
 
                 En utilisant la technologie RMI, nous avons créé un service pour interagir avec notre base de données de restaurants. Cette base de données a été enrichie et étendue pour inclure plus de détails sur chaque restaurant, notamment leur nom, leur adresse et leurs coordonnées GPS. Le service RMI offre également des fonctionnalités comme l'inscription à un service central, la récupération des coordonnées de tous les restaurants de Nancy, et la réservation d'une table en fournissant des détails tels que le nom, le prénom, le nombre de convives et les coordonnées téléphoniques. Toutes les réponses du service sont formatées en JSON pour une intégration plus aisée avec d'autres systèmes.
@@ -34,12 +34,12 @@
                 Pour traiter les données qui étaient bloquées, nous avons développé un autre service RMI qui utilise la classe HttpClient pour interroger ces données et renvoyer le code d'erreur, le contenu de la réponse et le 'content-type' de la réponse.
             </p>
         </div>
-        <div style="flex: 1; padding: 10px;">
+        <div style="flex: 1; padding: 10px; text-align: justify;">
             <p>
                 Ce service peut également s'inscrire sur un serveur central.
                 Afin de contourner les restrictions de sécurité du navigateur, nous avons créé un proxy utilisant la classe HttpServer. Ce proxy sert d'intermédiaire entre notre site et les données bloquées. Il offre également un service RMI pour permettre à nos services RMI de restaurants et des principaux établissements d'enseignement supérieur de s'inscrire. Grâce à ce proxy, nous avons ajouté à notre carte les établissements d'enseignement supérieur et les restaurants avec leurs coordonnées. Il est également possible de réserver une table depuis la marque d'un restaurant sur la carte.
 
-                Enfin, nous avons ajouté plusieurs fonctionnalités supplémentaires à notre application. Nous avons intégré un service météorologique pour afficher la météo des prochaines heures à Nancy. Nous avons également ajouté la possibilité d'enregistrer un nouveau restaurant en cliquant simplement sur sa localisation sur la carte. Un service générique a été développé pour récupérer le contenu des URLs bloquées par le navigateur.
+                Enfin, nous avons ajouté plusieurs fonctionnalités supplémentaires à notre application. Nous avons intégré un service météorologique pour afficher la météo des prochaines heures à Nancy. Nous avons également ajouté la possibilité d'enregistrer un nouveau restaurant en cliquant simplement sur sa localisation sur la carte. 
 
                 Tous nos codes sources sont disponibles sur notre dépôt Git et notre site contient un onglet "compte rendu" qui fournit un résumé complet de notre travail, y compris un schéma de notre architecture, ce qui a été fait, les informations nécessaires pour utiliser notre projet, et tout ce qui peut aider à comprendre notre travail.</p>
         </div>

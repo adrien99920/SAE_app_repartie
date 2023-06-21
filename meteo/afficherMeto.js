@@ -32,7 +32,7 @@ export const afficherMeteo = async () => {
     html += `
         <tr>
           <td>${heure}</td>
-          <td>${data[dateTime].temperature["2m"]-273.15}</td>
+          <td>${(data[dateTime].temperature["2m"]-273.15).toFixed(2) }</td>
           <td>${data[dateTime].pluie}</td>
           <td>${data[dateTime].risque_neige}</td>
         </tr>
