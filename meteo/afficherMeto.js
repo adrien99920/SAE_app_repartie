@@ -17,20 +17,28 @@ export const afficherMeteo = async () => {
   const heuresApresDateCourante = heurePossible.filter(heure => heure > currentHour);
 
   // Afficher les données pour les heures après la date courante
-  let html = "<div>"; 
+  let html = `
+  <h3>Météo à Nancy Aujourd'hui</h3>
+  <table>
+    <tr>
+      <th>Heure</th>
+      <th>Température</th>
+      <th>Pluie</th>
+      <th>Neige</th>
+    </tr>
+  `; 
   heuresApresDateCourante.forEach(heure => {
     const dateTime = `${currentYear}-${currentMonth}-${currentDay} ${heure}:00:00`;
-    console.log(data[dateTime]);
     html += `
-        <h3>Météo d'aujourd'hui à Nancy à ${heure} heure</h3>
-        <p>Temperature : ${data[dateTime].temperature["2m"]-273.15}</p>
-        <p>Pluie : ${data[dateTime].pluie}</p>
-        <p>Neige : ${data[dateTime].risque_neige}</p>
-
-
+        <tr>
+          <td>${heure}</td>
+          <td>${data[dateTime].temperature["2m"]-273.15}</td>
+          <td>${data[dateTime].pluie}</td>
+          <td>${data[dateTime].risque_neige}</td>
+        </tr>
     `
   });
-
+  html += "</table>";
   meteoFrance.innerHTML = `
     ${html}
   `
@@ -42,19 +50,22 @@ export const afficherMeteo = async () => {
 
 export const afficherMeteoCoord = async (lat, lon) =>{
     const data = await getMeteoCoord(lat, lon);
-    console.log(data); 
+    let good = false;
+
+  
+    if(data.current_weather != undefined){
+        good = true; 
+    }
     meteoGps.innerHTML = `
-        <h2>Météo actuelle selon votre position</h2>
+        <h3>Météo actuelle selon votre position</h3>
         <table>
             <tr>
-                <th>Heure</th>
                 <th>Température</th>
                 <th>Vitesse du vent</th>
             </tr>
             <tr>
-                <td>${data.current_weather.time}</td>
-                <td>${data.current_weather.temperature}</td>
-                <td>${data.current_weather.windspeed}</td>
+                <td>${good ? data.current_weather.temperature : "Indisponible pour le moment"}</td>
+                <td>${good ? data.current_weather.windspeed : "indisponible pour le moment"}</td>
             </tr>
         </table>
     `;

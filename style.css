@@ -13,8 +13,10 @@ header a:last-child{
 }
 
 #map {
-    height: 400px;
-    width: 100%;
+    height: 70vh;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px black solid;
   }
 
 #form_reservation{
@@ -26,3 +28,274 @@ header a:last-child{
   display: flex;
   flex-direction: row;
 }
+
+
+
+
+
+
+/* Style du conteneur principal */
+#add_resto_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Ajout de cette ligne */
+}
+
+/* Style du bouton Ajouter un nouveau restaurant */
+#add_resto {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Style du formulaire */
+#resto_info {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+/* Style des labels */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Style des champs de saisie lorsqu'ils sont en focus */
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du bouton de soumission */
+input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Style pour le conteneur "meto_gps" */
+#meto_gps {
+  margin-top: 20px;
+}
+
+/* Style pour le titre "h2" */
+#meto_gps h2 {
+  margin-bottom: 10px;
+}
+
+/* Style pour le tableau */
+#meto_gps table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style pour les en-têtes de colonne du tableau */
+#meto_gps th {
+  padding: 8px;
+  background-color: #f8f8f8;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Style pour les cellules du tableau */
+#meto_gps td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style pour la première cellule de chaque ligne du tableau */
+#meto_gps td:first-child {
+  font-weight: bold;
+}
+
+
+
+/* Style pour la div "meteo_france" */
+#meteo_france {
+  margin-bottom: 20px;
+}
+
+/* Style pour le tableau */
+#meteo_france table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style pour les en-têtes de colonne du tableau */
+#meteo_france th {
+  padding: 8px;
+  background-color: #f8f8f8;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Style pour les cellules du tableau */
+#meteo_france td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+/* Style pour le formulaire de réservation */
+#form_reservation {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Style pour les conteneurs des champs de saisie */
+#form_reservation div {
+  margin-bottom: 15px;
+}
+
+/* Style pour les labels */
+#form_reservation label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style pour les champs de saisie */
+#form_reservation input[type="text"],
+#form_reservation input[type="number"],
+#form_reservation input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style pour le bouton de réservation */
+#form_reservation button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #444;
+  padding-left: 10px;
+}
+
+.title {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e7e7e7;
+}
+
+.title h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.title ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.title ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.title p {
+  color: #999;
+  font-size: 14px;
+}
+
+.description {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.description div {
+  flex: 1;
+  padding: 10px;
+}
+
+.schem, .tuto, .depot {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.elem {
+  margin-bottom: 15px;
+}
+
+.elem code {
+  display: block;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.depot a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  min-height: 450px;
+  border: 0;
+}
+

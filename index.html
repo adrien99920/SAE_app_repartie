@@ -8,7 +8,6 @@
   <!-- Inclure les styles CSS de Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
   <!-- Définir la taille de la carte avec CSS -->
   
 </head>
@@ -22,9 +21,7 @@
 
   
   
-  <div class="add_resto_div">
-    <button id="add_resto">Ajouter un nouveau restaurant</button>
-
+  <div id="add_resto_div">
   
     <div id="resto_info">
       <form action="">
@@ -34,10 +31,10 @@
         <label for="adresse">Adresse: </label>
         <input type="text" name="adresse" id="adresse" required> 
   
-        <label for="nbPlace">Nombre de place: </label>
-        <input type="number"  min="1" name="nbPlace" id="nbPlace" required> 
       </form>
     </div>
+
+    <button id="add_resto">Ajouter un nouveau restaurant</button>
 
   </div>
   
@@ -46,13 +43,13 @@
   <div id="map"></div>
 
 
-  <div id="meteo_france">
-
-  </div>
-
   <div id="meto_gps">
-
   </div>
+    <div id="meteo_france">
+      
+    </div>
+  
+    
 
   <!-- Inclure la bibliothèque Leaflet -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
