@@ -12,22 +12,34 @@
   
 </head>
 <body>
-  <button id="add_resto">Ajouter un nouveau restaurant</button>
 
-    
+  <header>
+    <a href="#">Accueil</a>
+    <a href="#">A propos</a>
+  </header>
 
-  <div id="resto_info">
-    <form action="">
-      <label for="name">Nom du restaurant: </label>
-      <input type="text" name="name" id="name" required>
 
-      <label for="adresse">Adresse: </label>
-      <input type="text" name="adresse" id="adresse" required> 
+  
+  
+  <div class="add_resto_div">
+    <button id="add_resto">Ajouter un nouveau restaurant</button>
 
-      <label for="nbPlace">Nombre de place: </label>
-      <input type="number" name="nbPlace" id="nbPlace" required> 
-    </form>
+  
+    <div id="resto_info">
+      <form action="">
+        <label for="name">Nom du restaurant: </label>
+        <input type="text" name="name" id="name" required>
+  
+        <label for="adresse">Adresse: </label>
+        <input type="text" name="adresse" id="adresse" required> 
+  
+        <label for="nbPlace">Nombre de place: </label>
+        <input type="number"  min="0" name="nbPlace" id="nbPlace" required> 
+      </form>
+    </div>
+
   </div>
+  
    
 
   <div id="map"></div>

@@ -1,9 +1,19 @@
-body{
-  height: 100vh;
+header{
+  width: 100%;
+}
+
+header a{
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+}
+
+header a:last-child{
+  margin-left: 5%;
 }
 
 #map {
-    height: 70%;
+    height: 400px;
     width: 100%;
   }
 

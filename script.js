@@ -3,7 +3,7 @@ import { displayTravauxPing } from "./lib/travaux.js";
 import { displayRestaurant } from "./lib/resto.js";
 import { displayEcolesPing } from "./lib/ecoles.js";
 import { afficherResto } from "./lib/gestionResto.js";
-
+import { url } from "./lib/config.js";
 // Coordonnées de Nancy
 const nancyLat = 48.6921;
 const nancyLng = 6.1844;
@@ -35,26 +35,20 @@ btnAdd.addEventListener('click', () => {
 // event quand on clique sur la map 
 map.addEventListener('click', (e) => {
   if(isAddingMarker){
-    // on récupère le contenu du popup 
-    const popupContent = `
-    <b>Nom du restaurant :</b> ${nomResto.value}
-    `
-
-    afficherResto(map, e.latlng.lat, e.latlng.lng, addressResto.value, nomResto.value, 20);
-
+    
     // on crée le markeur 
     isAddingMarker = false;
     
     // appeler la méthode pour add dans la bd 
     const ajoutData = {
     name: nomResto.value,
-    nbPlaces: nbPResto.value,
+    nbPlaces: parseInt(nbPResto.value),
     address: addressResto.value,
     latitude: e.latlng.lat,
     longitude: e.latlng.lng,
   };
 
-  fetch('https://kizyow.fr/ajouterResto', {
+  fetch(url + '/ajouterResto', {
   method: 'POST',
   headers: {
     "Content-Type": "application/json",
@@ -70,8 +64,13 @@ map.addEventListener('click', (e) => {
   }
 })
 .then(data => {
-  // Faites quelque chose avec la réponse (data)
-  console.log(data);
+  // On affiche le resto 
+  if(data.restaurant_id >= 0){
+    afficherResto(map, e.latlng.lat, e.latlng.lng, addressResto.value, nomResto.value, data.restaurant_id);
+  }else{
+    alert("L'ajout du restaurant n'a pas abouti");
+  }
+
 })
 .catch(error => {
   console.log("Une erreur s'est produite lors de la requête :", error);
